@@ -1,0 +1,116 @@
+@import mixins
+@import colors
+@import fonts
+
+html,
+body
+	+flush()
+	+dims(100%, 100%)
+	+font-setup-dark()
+	background-color: $background-color
+
+#header
+	+dims(calc(100% - 10em), 10em)
+	background-color: $primary-color
+	padding: 5em
+	+font-setup-light()
+
+.infoWrapper
+	+dims(100%, 5em)
+	#info
+		+dims(100%, 5em)
+		background-color: white
+		+box-shadow(0px, 2.5px, 5px, 0px, 0.25)
+		text-align: center
+		ul
+			list-style-type: none
+			+flush()
+			overflow: hidden
+			li
+				display: inline-block
+				padding: 0 4em 0 4em
+				line-height: 3em
+				i
+					color: $accent-color
+					font-size: 3em
+.sticky
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 100
+
+.content
+	width: 75%
+	margin-left: auto
+	margin-right: auto
+
+$experienceBarHeight: 2em
+
+.container
+	border-radius: 3px
+	+box-shadow(0px, 0px, 2px, 2px, 0.1)
+	background-color: white
+
+.programmingExperienceContainer
+	@extend .container
+	padding: 0 10px 10px 10px
+	.programmingExperience
+		padding: 10px 0px 0px 0px
+		height: $experienceBarHeight
+		div
+			display: inline-block;
+			vertical-align: top
+			line-height: $experienceBarHeight
+		.barContainer
+			+dims(30%, 100%)
+			.bar
+				height: 100%
+				background-color: $accent-color
+		.experienceTag
+			height: 100%
+			padding-left: 10px
+
+.softwareExperienceContainer
+	@extend .container
+	width: 100%
+	.softwareExperience
+		img
+			+dims(7em, 7em)
+		$seperator-color: #9e9e9e
+		.seperator
+			+dims(0px, 40px)
+			border: 2px solid
+			border-radius: 5px
+			border-color: $seperator-color
+			background-color: $seperator-color
+			margin-left: 5px
+			margin-right: 10px
+
+.experienceContainer
+	@extend .container
+	width: calc(50% - 30px)
+	padding: 0 10px 0 10px
+	display: inline-block
+	vertical-align: top
+	margin-bottom: 10px
+	.dates
+		margin-top: -17px
+		opacity: 0.7
+
+.leftContainer
+	margin-right: 5px
+
+.rightContainer
+	margin-left: 5px
+
+$footer-height: 5em
+#footer
+	margin-top: 5em
+	+dims(100%, $footer-height)
+	background-color: white
+	+box-shadow(0px, -2.5px, 5px, 0px, 0.25)
+	text-align: center
+	line-height: $footer-height
+	font-size: 18px
+	// +font-block(400, 34px, $font-opacity)

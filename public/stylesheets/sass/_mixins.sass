@@ -1,0 +1,23 @@
+=dims($width, $height)
+	width: $width
+	height: $height
+
+=pos($x, $y)
+	top: $x
+	left: $y
+
+=flush()
+	padding: 0
+	margin: 0
+
+=transition($a, $b, $c)
+	-webkit-transition: $a $b $c
+	-moz-transition: $a $b $c
+	-o-transition: $a $b $c
+	-ms-transition: $a $b $c
+	transition: $a $b $c
+
+=box-shadow($h-len, $v-len, $blur-rad, $spread-rad, $color-opacity)
+	-webkit-box-shadow:	$h-len $v-len $blur-rad $spread-rad rgba(0,0,0,$color-opacity);
+	-moz-box-shadow:	$h-len $v-len $blur-rad $spread-rad rgba(0,0,0,$color-opacity);
+	box-shadow:			$h-len $v-len $blur-rad $spread-rad rgba(0,0,0,$color-opacity);

@@ -1,0 +1,53 @@
+$font-stack: 'Roboto', sans-serif
+$font-color: #000
+$font-opacity: 0.95
+$font-size: 14px
+$font-weight: 400
+
+$font-stack-light: $font-stack
+$font-color-light: #FFF
+$font-opacity-light: 1
+$font-size-light: $font-size
+$font-weight-light: $font-weight
+
+=font-setup-dark()
+	font-family: $font-stack
+	color: $font-color
+	font-size: $font-size
+	font-weight: $font-weight
+
+=font-setup-light()
+	font-family: $font-stack-light
+	color: $font-color-light
+	font-size: $font-size-light
+	font-weight: $font-weight-light
+
+=font-block($weight, $size, $opacity)
+	font-weight: $weight
+	font-size: $size
+	opacity: $opacity
+
+h1
+	+font-block(300, 112px, $font-opacity)
+
+h2
+	+font-block(400, 56px, $font-opacity)
+
+h3
+	+font-block(400, 45px, $font-opacity)
+
+h4
+	+font-block(400, 34px, $font-opacity)
+
+h5
+	+font-block(400, 24px, $font-opacity)
+
+h6
+	+font-block(500, 20px, $font-opacity)
+
+p
+	+font-block($font-weight, $font-size, $font-opacity)
+
+a
+	text-decoration: none
+	color: $accent-color

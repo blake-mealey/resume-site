@@ -1,0 +1,14 @@
+[
+	{
+		"position": "GUI Automation Intern",
+		"company": "Synopsys Inc.",
+		"dates": "May 2016 - September 2016 (4 months)",
+		"description": "Worked in Java to build frameworks for GUI automation backends, using tools like SikuliX and Tesseract. This included working on PDF automation (parsing text from PDFs and using SikuliX visual tools on PDFs), and improving existing OCR functionality for desktop automation (mainly through image pre-processing using libraries like BoofCV)."
+	},
+	{
+		"position": "Construction Labourer",
+		"company": "Steamatic Canada Inc.",
+		"dates": "June 2013 - August 2013 (3 months)",
+		"description": "Contributed hard work with smart, safe and effective practices as a valued member of demolition, cleaning and restoration services teams. Used a range of restoration equipment and techniques to restore hard-hit businesses and homes in the Calgary area following the 2013 Calgary flood."
+	}
+]
