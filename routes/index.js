@@ -20,8 +20,10 @@ router.get('/', function(req, res, next) {
 		links: readFile(dataDirectory + "links.json"),
 		programming: readFile(dataDirectory + "programming.json"),
 		software: readFile(dataDirectory + "software.json"),
+		competitions: readFile(dataDirectory + "competitions.json"),
 		experience: readFile(dataDirectory + "experience.json"),
-		education: readFile(dataDirectory + "education.json")
+		education: readFile(dataDirectory + "education.json"),
+		activities: readFile(dataDirectory + "activities.json")
 	};
 
 	// Determine bar length and number of years experience for programming languages

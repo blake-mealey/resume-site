@@ -21,10 +21,12 @@ block content
 			each exp in programming
 				.programmingExperience
 					.barContainer
-						.bar(style={'width': exp.barValue})
 						//- .bar(style={'background-color': exp.barColor, 'width': exp.barValue})
+						.bar(style={'width': exp.barValue})
+							p= exp.language
 					.experienceTag
-						p!= "<b>" + exp.language + ":</b> " + exp.description
+						// p!= "<b>" + exp.language + ":</b> " + exp.description
+						p!= exp.description
 		br
 		p Comfortable with both Windows and UNIX workspaces and terminals, but prefer to develop with a bash terminal.
 
@@ -46,28 +48,50 @@ block content
 							td
 								img(src=program.image title=program.name)
 
+		//- h3 Competitions
+		//- .softwareExperienceContainer
+		//- 	table.softwareExperience(border=0 cellpadding=5 cellspacing=5)
+		//- 		tr
+		//- 			td
+		//- 				b Place
+		//- 			td
+		//- 			td
+		//- 				b Competitions
+		//- 		each level in competitions
+		//- 			tr
+		//- 				td= level.level
+		//- 				td
+		//- 					.seperator
+		//- 				each program in level.competitions
+		//- 					td
+		//- 						p
+		//- 							strong= program.name
+		//- 						p= program.description
+		//- 						// p!= "<b>" + program.name + ":</b> " + program.description
+		//- 						//- p!= strong program.name
+
 		include:markdown-it markdown/skills-achievements.md
 
 		h2 Work Experience
 		each job, index in experience
 			.experienceContainer(class=(index%2 == 0 ? "leftContainer" : "rightContainer"))
-				h4!= job.position + ", " + "<i>" + job.company + "</i>"
+				h4!= job.position + ", <i>" + job.company + "</i>"
 				p.dates= job.dates
 				p= job.description
 
 		h2 Education
 		each edu, index in education
 			.experienceContainer(class=(index%2 == 0 ? "leftContainer" : "rightContainer"))
-				h4!= edu.degree + ", " + "<i>" + edu.school + "</i>"
+				h4!= edu.degree + ", <i>" + edu.school + "</i>"
 				p.dates= edu.dates
 				p= edu.description
 
 		h2 Extracurricular Activities
-		.experienceContainer.leftContainer
-			h4 Competitive Programming
-			p Whenever I get the opportunity I enjoy challenging myself with programming competitions.
-		.experienceContainer.rightContainer
-			h4 Hiking
-			p I love hiking to the tops of mountains. Not much during the winter, unfortunately.
+		each activity, index in activities
+			.experienceContainer(class=(index%2 == 0 ? "leftContainer" : "rightContainer"))
+				h4= activity.title
+				p= activity.description
+				//- if activity.image
+				//- 	img(src=activity.image)
 
 		h4 References available upon request

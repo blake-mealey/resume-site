@@ -67,6 +67,12 @@ $experienceBarHeight: 2em
 			.bar
 				height: 100%
 				background-color: $accent-color
+				p
+					color: white
+					font-weight: bold
+					margin-left: 10px
+					margin-right: 10px
+					line-height: $experienceBarHeight
 		.experienceTag
 			height: 100%
 			padding-left: 10px
@@ -94,9 +100,18 @@ $experienceBarHeight: 2em
 	display: inline-block
 	vertical-align: top
 	margin-bottom: 10px
+	// overflow: hidden
+	position: relative
 	.dates
 		margin-top: -17px
 		opacity: 0.7
+	/* img
+		position: absolute
+		top: calc(100% - 10px)
+		left: 0
+		width: 100%
+		max-height: 400px
+		object-fit: cover */
 
 .leftContainer
 	margin-right: 5px
