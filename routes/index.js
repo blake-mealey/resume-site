@@ -32,7 +32,7 @@ router.get('/', function(req, res, next) {
 	var language;
 	for(var i = data.programming.length - 1; i >= 0; i--) {
 		language = data.programming[i];
-		language.yearsPassed = currentYear - language.firstYear + 1;
+		language.yearsPassed = currentYear - language.firstYear;
 		longestYearsPassed = Math.max(longestYearsPassed, language.yearsPassed);
 	}
 
