@@ -18,10 +18,10 @@
 		"title": "My Projects",
 		"link": "http://www.chimerical.ca",
 		"image": "images/domain-icon-23024.png"
-	}/*,
+	},
 	{
 		"title": "PDF Version",
 		"link": "files/Blake Mealey Resume.pdf",
 		"image": "images/ic_file_download_black_36dp_1x.png"
-	}*/
+	}
 ]
