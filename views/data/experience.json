@@ -1,8 +1,14 @@
 [
 	{
-		"position": "GUI Automation Intern",
+		"position": "Technical-Engineering Intern",
 		"company": "Synopsys Inc.",
-		"dates": "May 2016 - September 2016 (4 months)",
+		"dates": "May 2017 - August 2017 (4 months)",
+		"description": "Worked in Java to automate existing manual test cases using Selenium. I also worked on various frameworks for automation including PDF and CSV validation. As part of the automation team, I took part in daily standup emails and weekly team planning meetings. I also was assigned to manual testing and test failure triaging at times."
+	},
+	{
+		"position": "Technical-Engineering Intern",
+		"company": "Synopsys Inc.",
+		"dates": "May 2016 - August 2016 (4 months)",
 		"description": "Worked in Java to build frameworks for GUI automation backends, using tools like SikuliX and Tesseract. This included working on PDF automation (parsing text from PDFs and using SikuliX visual tools on PDFs), and improving existing OCR functionality for desktop automation (mainly through image pre-processing using libraries like BoofCV). As part of the automation team I participated in daily standup emails and weekly team meetings where I shared what I worked on in the past week, any challenges I was facing with my projects, and what I would be working on in the coming week."
 	},
 	{

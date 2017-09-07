@@ -1,33 +1,28 @@
 [
 	{
 		"language": "Java",
-		"description": ", including a summer in an industry setting",
-		"firstYear": 2011,
-		"barColor": "#EC2025"
+		"description": "including two summers in an industry setting",
+		"years": 6
 	},
 	{
 		"language": "Lua",
-		"description": ", primarily for game development with ROBLOX Studio",
-		"firstYear": 2011,
-		"barColor": "#000080"
+		"description": "primarily for game development with ROBLOX Studio",
+		"years": 6
 	},
 	{
 		"language": "JavaScript",
-		"description": ", using jQuery, Node.js, and express.js",
-		"firstYear": 2014,
-		"barColor": "#E5A229"
+		"description": "using jQuery, Node.js, and express.js",
+		"years": 3
 	},
 	{
 		"language": "HTML, CSS",
-		"description": ", as well as Pug and Sass",
-		"firstYear": 2013,
-		"barColor": "#E5A229"
+		"description": "as well as Pug and Sass",
+		"years": 4
 	},
 	{
 		"language": "C++",
-		"yearsOverride": "Half a year experience",
-		"description": ", in conjunction with OpenGL and GLFW",
-		"firstYear": 2016,
-		"barColor": "#E5A229"
+		"description": "in conjunction with OpenGL and GLFW",
+		"years": 0.6,
+		"yearsOverride": "Half a year"
 	}
 ]

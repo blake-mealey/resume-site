@@ -21,11 +21,9 @@ block content
 			each exp in programming
 				.programmingExperience
 					.barContainer
-						//- .bar(style={'background-color': exp.barColor, 'width': exp.barValue})
 						.bar(style={'width': exp.barValue})
 							p= exp.language
 					.experienceTag
-						// p!= "<b>" + exp.language + ":</b> " + exp.description
 						p!= exp.description
 		br
 		p Comfortable with both Windows and UNIX workspaces and terminals, but prefer to develop with a bash terminal.
