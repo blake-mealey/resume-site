@@ -16,6 +16,7 @@
     "morgan": "~1.6.1",
     "node-sass-middleware": "^0.9.8",
     "number-to-words": "^1.2.3",
+    "request": "^2.83.0",
     "serve-favicon": "~2.3.0"
   }
 }

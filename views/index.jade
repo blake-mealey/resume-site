@@ -13,24 +13,35 @@ block content
 							p= link.title
 
 	.content
-		include:markdown-it markdown/summary.md
-
 		h2 Work Experience
 		each job, index in experience
 			.experienceContainer(class=(index % 2 == 0 ? "leftContainer" : "rightContainer"))
 				h4!= job.position + ", <i>" + job.company + "</i>"
 				p.dates= job.dates
-				p= job.description
+				ul
+					each bullet in job.descriptionBullets
+						li= bullet
 
 		h2 Education
 		each edu, index in education
 			.experienceContainer(class=(index % 2 == 0 ? "leftContainer" : "rightContainer"))
 				h4!= edu.degree + ", <i>" + edu.school + "</i>"
 				p.dates= edu.dates
-				p= edu.description
+				ul
+					each bullet in edu.descriptionBullets
+						li= bullet
 
-		h2 Skills and Achievements
-		include:markdown-it markdown/skills-achievements.md
+		h2 Technical Experience
+
+		h3 Projects
+		each project, index in projects
+			a(href=project.url)
+				.experienceContainer(class=(index % 2 == 0 ? "leftContainer" : "rightContainer"))
+					h4= project.name
+					p= project.description
+					if project.image
+						.imgHolder
+							img(src=project.image)
 
 		h3 Programming
 		.programmingExperienceContainer
@@ -41,8 +52,6 @@ block content
 							p= exp.language
 					.experienceTag
 						p!= exp.description
-		br
-		p Comfortable with both Windows and UNIX workspaces and terminals, but prefer to develop with a bash terminal.
 
 		h3 Software
 		.softwareExperienceContainer
@@ -62,13 +71,49 @@ block content
 							td
 								img(src=program.image title=program.name)
 
+		h3 Miscellaneous
+		ul
+			each item in miscellaneous
+				li= item
+
+		h2 Achievements
+
+		h3 Competitions
+		.competitionsContainer
+			table.competitions(border=0 cellpadding=5 cellspacing=5)
+				tr
+					td
+						b Place
+					td
+						b Competition
+					td
+						b Team Size
+				each competition in achievements.competitions
+					tr
+						td.place
+							.num= competition.place.num
+							.postfix= competition.place.postfix
+						td= competition.name
+						td.teamSize
+							- var i = 0;
+							while i++ < competition.teamSize
+								i.material-icons person
+
+		h3 Academic
+		ul
+			each item in achievements.academic
+				li= item
+
+		//- include:markdown-it markdown/skills-achievements.md
 
 		h2 Extracurricular Activities
 		each activity, index in activities
 			.experienceContainer(class=(index%2 == 0 ? "leftContainer" : "rightContainer"))
 				h4= activity.title
 				p= activity.description
-				//- if activity.image
-				//- 	img(src=activity.image)
+				if activity.image
+					.imgHolder
+						img(src=activity.image)
 
-		h4 References available upon request
+		h2 References
+		p Available upon request

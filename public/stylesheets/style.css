@@ -1,36 +1,39 @@
+body {
+  font-size: 100%; }
+
 h1 {
   font-weight: 300;
-  font-size: 112px;
+  font-size: 7.5em;
   opacity: 0.95; }
 
 h2 {
   font-weight: 400;
-  font-size: 56px;
+  font-size: 4em;
   opacity: 0.95; }
 
 h3 {
   font-weight: 400;
-  font-size: 45px;
+  font-size: 3em;
   opacity: 0.95; }
 
 h4 {
   font-weight: 400;
-  font-size: 34px;
+  font-size: 2em;
   opacity: 0.95; }
 
 h5 {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 1.5em;
   opacity: 0.95; }
 
 h6 {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.25em;
   opacity: 0.95; }
 
-p {
+p, ul, table {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1.15em;
   opacity: 0.95; }
 
 a {
@@ -43,10 +46,8 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   color: #000;
-  font-size: 14px;
-  font-weight: 400;
   background-color: #f7f7f7; }
 
 #header {
@@ -54,17 +55,15 @@ body {
   height: 10em;
   background-color: #0097A7;
   padding: 5em;
-  font-family: "Roboto", sans-serif;
-  color: #FFF;
-  font-size: 14px;
-  font-weight: 400; }
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  color: #FFF; }
 
 .infoWrapper {
   width: 100%;
-  height: 5em; }
+  height: 5.5em; }
   .infoWrapper #info {
     width: 100%;
-    height: 5em;
+    height: 5.5em;
     background-color: white;
     -webkit-box-shadow: 0px 2.5px 5px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 2.5px 5px 0px rgba(0, 0, 0, 0.25);
@@ -95,7 +94,7 @@ body {
   margin-left: auto;
   margin-right: auto; }
 
-.container, .programmingExperienceContainer, .softwareExperienceContainer, .experienceContainer {
+.container, .programmingExperienceContainer, .softwareExperienceContainer, .competitionsContainer, .experienceContainer {
   border-radius: 3px;
   -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
@@ -103,9 +102,9 @@ body {
   background-color: white; }
 
 .programmingExperienceContainer {
-  padding: 0 10px 10px 10px; }
+  padding: 0 0.9em 0.9em 0.9em; }
   .programmingExperienceContainer .programmingExperience {
-    padding: 10px 0px 0px 0px;
+    padding: 0.9em 0 0 0;
     height: 2em; }
     .programmingExperienceContainer .programmingExperience div {
       display: inline-block;
@@ -120,51 +119,74 @@ body {
         .programmingExperienceContainer .programmingExperience .barContainer .bar p {
           color: white;
           font-weight: bold;
-          margin-left: 10px;
-          margin-right: 10px;
+          margin-left: 0.4em;
+          margin-right: 0.9em;
           line-height: 2em; }
     .programmingExperienceContainer .programmingExperience .experienceTag {
       height: 100%;
-      padding-left: 10px; }
+      padding-left: 0.9em; }
 
 .softwareExperienceContainer {
   width: 100%; }
   .softwareExperienceContainer .softwareExperience img {
-    width: 7em;
-    height: 7em; }
+    width: 5em;
+    height: 5em; }
   .softwareExperienceContainer .softwareExperience .seperator {
     width: 0px;
-    height: 40px;
+    height: 2.5em;
     border: 2px solid;
     border-radius: 5px;
     border-color: #9e9e9e;
     background-color: #9e9e9e;
-    margin-left: 5px;
-    margin-right: 10px; }
+    margin-left: 0.9em;
+    margin-right: 0.9em; }
 
-.experienceContainer {
-  width: calc(50% - 30px);
-  padding: 0 10px 0 10px;
-  display: inline-block;
-  vertical-align: top;
-  margin-bottom: 10px;
-  position: relative;
-  /* img
-		position: absolute
-		top: calc(100% - 10px)
-		left: 0
-		width: 100%
-		max-height: 400px
-		object-fit: cover */ }
-  .experienceContainer .dates {
-    margin-top: -17px;
+.competitionsContainer {
+  width: 100%; }
+  .competitionsContainer .competitions .place, .competitionsContainer .competitions .teamSize {
+    text-align: center; }
+  .competitionsContainer .competitions .place .num, .competitionsContainer .competitions .place .postfix {
+    display: inline-block; }
+  .competitionsContainer .competitions .place .num {
+    font-size: 1.6em;
+    font-weight: 200; }
+  .competitionsContainer .competitions .place .postfix {
+    position: relative;
+    bottom: 0.8em;
+    font-size: 0.8em; }
+  .competitionsContainer .competitions .teamSize i {
+    margin: 0 -0.2em 0 0;
     opacity: 0.7; }
 
+.experienceContainer {
+  width: calc(50% - 2.7em);
+  padding: 0 0.9em 0 0.9em;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 0.9em; }
+  .experienceContainer .dates {
+    margin-top: -1.1em;
+    opacity: 0.7; }
+  .experienceContainer .imgHolder {
+    width: 100%;
+    height: 30em;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.9em; }
+    .experienceContainer .imgHolder img {
+      width: 100%;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0; }
+  .experienceContainer ul {
+    padding-left: 1.5em; }
+
 .leftContainer {
-  margin-right: 5px; }
+  margin-right: .45em; }
 
 .rightContainer {
-  margin-left: 5px; }
+  margin-left: .45em; }
 
 #footer {
   margin-top: 5em;
@@ -176,4 +198,4 @@ body {
   box-shadow: 0px -2.5px 5px 0px rgba(0, 0, 0, 0.25);
   text-align: center;
   line-height: 5em;
-  font-size: 18px; }
+  font-size: 1.2em; }

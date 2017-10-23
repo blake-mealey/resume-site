@@ -84,3 +84,15 @@ $RECYCLE.BIN/
 # Sublime Text Project
 *.sublime-workspace
 *.sublime-project
+
+
+# Secrets
+# =========================
+
+secrets/
+views/data/
+
+# Server Stuff
+# =========================
+
+run.sh
