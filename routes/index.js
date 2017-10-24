@@ -16,6 +16,11 @@ function readFile(fileName, dir) {
 	return JSON.parse(JSON.minify(data)); // minify so comments work in data files
 }
 
+/* Backwards-compatible resume link */
+router.get('/files/Blake%20Mealey%20Resume.pdf', function(req, res, next) {
+	res.redirect('/files/Blake-Mealey-Resume.pdf');
+});
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	// Read in initial data from files

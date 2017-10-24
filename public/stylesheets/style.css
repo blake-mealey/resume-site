@@ -1,10 +1,17 @@
 body {
   font-size: 100%; }
 
-h1 {
-  font-weight: 300;
-  font-size: 7.5em;
-  opacity: 0.95; }
+@media only screen and (min-width: 75em) {
+  h1 {
+    font-weight: 300;
+    font-size: 7.5em;
+    opacity: 0.95; } }
+
+@media only screen and (max-width: 75em) {
+  h1 {
+    font-weight: 300;
+    font-size: 4em;
+    opacity: 0.95; } }
 
 h2 {
   font-weight: 400;
@@ -51,12 +58,19 @@ body {
   background-color: #f7f7f7; }
 
 #header {
-  width: calc(100% - 10em);
-  height: 10em;
   background-color: #0097A7;
-  padding: 5em;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   color: #FFF; }
+  @media only screen and (min-width: 75em) {
+    #header {
+      width: calc(100% - 10em);
+      height: 10em;
+      padding: 5em; } }
+  @media only screen and (max-width: 75em) {
+    #header {
+      width: calc(100% - 2em);
+      height: auto;
+      padding: 1em; } }
 
 .infoWrapper {
   width: 100%;
@@ -68,7 +82,8 @@ body {
     -webkit-box-shadow: 0px 2.5px 5px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 2.5px 5px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 2.5px 5px 0px rgba(0, 0, 0, 0.25);
-    text-align: center; }
+    text-align: center;
+    position: relative; }
     .infoWrapper #info ul {
       list-style-type: none;
       padding: 0;
@@ -76,11 +91,24 @@ body {
       overflow: hidden; }
       .infoWrapper #info ul li {
         display: inline-block;
-        padding: 0 4em 0 4em;
         line-height: 3em; }
-        .infoWrapper #info ul li i {
-          color: #D32F2F;
-          font-size: 3em; }
+        @media only screen and (min-width: 75em) {
+          .infoWrapper #info ul li {
+            padding: 0 4em 0 4em; } }
+        @media only screen and (max-width: 75em) {
+          .infoWrapper #info ul li {
+            padding: 0 0.5em 0 0.5em; }
+            .infoWrapper #info ul li p {
+              font-size: 1em; } }
+    .infoWrapper #info .mdl-button--fab {
+      position: absolute;
+      top: calc(100% - 28px); }
+      @media only screen and (min-width: 75em) {
+        .infoWrapper #info .mdl-button--fab {
+          right: calc(12.5% + 0.5em); } }
+      @media only screen and (max-width: 75em) {
+        .infoWrapper #info .mdl-button--fab {
+          right: 0.5em; } }
 
 .sticky {
   position: fixed;
@@ -90,9 +118,14 @@ body {
   z-index: 100; }
 
 .content {
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: 0 auto 0 auto;
+  padding: 0 .45em 0 .45em; }
+  @media only screen and (min-width: 75em) {
+    .content {
+      width: 75%; } }
+  @media only screen and (max-width: 75em) {
+    .content {
+      width: calc(100% - 0.9em); } }
 
 .container, .programmingExperienceContainer, .softwareExperienceContainer, .competitionsContainer, .experienceContainer {
   border-radius: 3px;
@@ -100,19 +133,29 @@ body {
   -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
   background-color: white; }
+  @media only screen and (max-width: 75em) {
+    .container, .programmingExperienceContainer, .softwareExperienceContainer, .competitionsContainer, .experienceContainer {
+      width: calc(100% - 1.8em); } }
 
 .programmingExperienceContainer {
   padding: 0 0.9em 0.9em 0.9em; }
   .programmingExperienceContainer .programmingExperience {
     padding: 0.9em 0 0 0;
     height: 2em; }
+    @media only screen and (max-width: 75em) {
+      .programmingExperienceContainer .programmingExperience {
+        display: inline-block;
+        width: 100%; } }
     .programmingExperienceContainer .programmingExperience div {
       display: inline-block;
       vertical-align: top;
       line-height: 2em; }
     .programmingExperienceContainer .programmingExperience .barContainer {
-      width: 30%;
+      width: 100%;
       height: 100%; }
+      @media only screen and (min-width: 75em) {
+        .programmingExperienceContainer .programmingExperience .barContainer {
+          width: 30%; } }
       .programmingExperienceContainer .programmingExperience .barContainer .bar {
         height: 100%;
         background-color: #D32F2F; }
@@ -123,26 +166,38 @@ body {
           margin-right: 0.9em;
           line-height: 2em; }
     .programmingExperienceContainer .programmingExperience .experienceTag {
-      height: 100%;
-      padding-left: 0.9em; }
+      height: 100%; }
+      @media only screen and (min-width: 75em) {
+        .programmingExperienceContainer .programmingExperience .experienceTag {
+          padding-left: 0.9em; } }
+      @media only screen and (max-width: 75em) {
+        .programmingExperienceContainer .programmingExperience .experienceTag {
+          display: block; } }
 
 .softwareExperienceContainer {
-  width: 100%; }
-  .softwareExperienceContainer .softwareExperience img {
-    width: 5em;
-    height: 5em; }
-  .softwareExperienceContainer .softwareExperience .seperator {
-    width: 0px;
-    height: 2.5em;
-    border: 2px solid;
-    border-radius: 5px;
-    border-color: #9e9e9e;
-    background-color: #9e9e9e;
-    margin-left: 0.9em;
-    margin-right: 0.9em; }
+  padding: 0 0.9em 0 0.9em; }
+  .softwareExperienceContainer .softwareExperience .imgContainer {
+    float: left; }
+    .softwareExperienceContainer .softwareExperience .imgContainer img {
+      width: 5em;
+      height: 5em; }
+  .softwareExperienceContainer .softwareExperience .seperatorParent {
+    height: 1px; }
+    .softwareExperienceContainer .softwareExperience .seperatorParent .seperator {
+      width: 0px;
+      height: 60%;
+      border: 2px solid;
+      border-radius: 5px;
+      border-color: #9e9e9e;
+      background-color: #9e9e9e;
+      margin-left: 0.9em;
+      margin-right: 0.9em; }
+      @media only screen and (max-width: 75em) {
+        .softwareExperienceContainer .softwareExperience .seperatorParent .seperator {
+          height: 85%; } }
 
 .competitionsContainer {
-  width: 100%; }
+  padding: 0 0.9em 0 0.9em; }
   .competitionsContainer .competitions .place, .competitionsContainer .competitions .teamSize {
     text-align: center; }
   .competitionsContainer .competitions .place .num, .competitionsContainer .competitions .place .postfix {
@@ -159,7 +214,6 @@ body {
     opacity: 0.7; }
 
 .experienceContainer {
-  width: calc(50% - 2.7em);
   padding: 0 0.9em 0 0.9em;
   display: inline-block;
   vertical-align: top;
@@ -182,11 +236,17 @@ body {
   .experienceContainer ul {
     padding-left: 1.5em; }
 
-.leftContainer {
-  margin-right: .45em; }
+@media only screen and (min-width: 75em) {
+  .halfContainer, .leftContainer, .rightContainer {
+    width: calc(50% - 1.8em - 0.225em); } }
 
-.rightContainer {
-  margin-left: .45em; }
+@media only screen and (min-width: 75em) {
+  .leftContainer {
+    margin-right: .45em; } }
+
+@media only screen and (max-width: 75em) {
+  .leftContainer {
+    margin-right: 0; } }
 
 #footer {
   margin-top: 5em;

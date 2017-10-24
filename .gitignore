@@ -84,7 +84,8 @@ $RECYCLE.BIN/
 # Sublime Text Project
 *.sublime-workspace
 *.sublime-project
-
+.idea/
+resume-site.iml
 
 # Secrets
 # =========================

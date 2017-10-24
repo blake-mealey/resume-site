@@ -11,6 +11,9 @@ block content
 						a(href=link.link)
 							img(src=link.image width=32 height=32)
 							p= link.title
+			form(method='get' action='files/Blake-Mealey-Resume.pdf')
+				button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored(type='submit')
+					i.material-icons file_download
 
 	.content
 		h2 Work Experience
@@ -52,6 +55,7 @@ block content
 							p= exp.language
 					.experienceTag
 						p!= exp.description
+				
 
 		h3 Software
 		.softwareExperienceContainer
@@ -65,10 +69,10 @@ block content
 				each level in software
 					tr
 						td= level.level
-						td
+						td.seperatorParent
 							.seperator
 						each program in level.software
-							td
+							td.imgContainer
 								img(src=program.image title=program.name)
 
 		h3 Miscellaneous

@@ -11,9 +11,13 @@ body
 	background-color: $background-color
 
 #header
-	+dims(calc(100% - 10em), 10em)
+	+respond-to(screen)
+		+dims(calc(100% - 10em), 10em)
+		padding: 5em
+	+respond-to(handhelds)
+		+dims(calc(100% - 2em), auto)
+		padding: 1em
 	background-color: $primary-color
-	padding: 5em
 	+font-setup-light()
 
 .infoWrapper
@@ -23,17 +27,27 @@ body
 		background-color: white
 		+box-shadow(0px, 2.5px, 5px, 0px, 0.25)
 		text-align: center
+		position: relative
 		ul
 			list-style-type: none
 			+flush()
 			overflow: hidden
 			li
 				display: inline-block
-				padding: 0 4em 0 4em
 				line-height: 3em
-				i
-					color: $accent-color
-					font-size: 3em
+				+respond-to(screen)
+					padding: 0 4em 0 4em
+				+respond-to(handhelds)
+					padding: 0 0.5em 0 0.5em
+					p
+						font-size: 1em
+		.mdl-button--fab
+			position: absolute
+			top: calc(100% - 28px)
+			+respond-to(screen)
+				right: calc(12.5% + 0.5em)
+			+respond-to(handhelds)
+				right: 0.5em
 
 .sticky
 	position: fixed
@@ -43,33 +57,39 @@ body
 	z-index: 100
 
 .content
-	// +respond-to(screen)
-		// width: 75%
-	// +respond-to(handhelds)
-		// width: 100%
-	width: 75%
-	margin-left: auto
-	margin-right: auto
-
-$experienceBarHeight: 2em
+	// background-color: aqua
+	margin: 0 auto 0 auto
+	+respond-to(screen)
+		width: 75%
+	+respond-to(handhelds)
+		width: calc(100% - 0.9em)
+	padding: 0 .45em 0 .45em
 
 .container
 	border-radius: 3px
 	+box-shadow(0px, 0px, 2px, 2px, 0.1)
 	background-color: white
+	+respond-to(handhelds)
+		width: calc(100% - 1.8em)
 
+$experienceBarHeight: 2em
 .programmingExperienceContainer
 	@extend .container
 	padding: 0 0.9em 0.9em 0.9em
 	.programmingExperience
 		padding: 0.9em 0 0 0
 		height: $experienceBarHeight
+		+respond-to(handhelds)
+			display: inline-block
+			width: 100%
 		div
 			display: inline-block
 			vertical-align: top
 			line-height: $experienceBarHeight
 		.barContainer
-			+dims(30%, 100%)
+			+dims(100%, 100%)
+			+respond-to(screen)
+				width: 30%
 			.bar
 				height: 100%
 				background-color: $accent-color
@@ -81,27 +101,36 @@ $experienceBarHeight: 2em
 					line-height: $experienceBarHeight
 		.experienceTag
 			height: 100%
-			padding-left: 0.9em
+			+respond-to(screen)
+				padding-left: 0.9em
+			+respond-to(handhelds)
+				display: block
 
 .softwareExperienceContainer
 	@extend .container
-	width: 100%
+	padding: 0 0.9em 0 0.9em
 	.softwareExperience
-		img
-			+dims(5em, 5em)
+		.imgContainer
+			float: left
+			img
+				+dims(5em, 5em)
 		$seperator-color: #9e9e9e
-		.seperator
-			+dims(0px, 2.5em)
-			border: 2px solid
-			border-radius: 5px
-			border-color: $seperator-color
-			background-color: $seperator-color
-			margin-left: 0.9em
-			margin-right: 0.9em
+		.seperatorParent
+			height: 1px
+			.seperator
+				+dims(0px, 60%)
+				+respond-to(handhelds)
+					height: 85%
+				border: 2px solid
+				border-radius: 5px
+				border-color: $seperator-color
+				background-color: $seperator-color
+				margin-left: 0.9em
+				margin-right: 0.9em
 
 .competitionsContainer
 	@extend .container
-	width: 100%
+	padding: 0 0.9em 0 0.9em
 	.competitions
 		.place, .teamSize
 			text-align: center
@@ -122,7 +151,6 @@ $experienceBarHeight: 2em
 
 .experienceContainer
 	@extend .container
-	width: calc(50% - 2.7em)
 	padding: 0 0.9em 0 0.9em
 	display: inline-block
 	vertical-align: top
@@ -145,11 +173,19 @@ $experienceBarHeight: 2em
 	ul
 		padding-left: 1.5em
 
+.halfContainer
+	+respond-to(screen)
+		width: calc(50% - 1.8em - 0.225em)
+
 .leftContainer
-	margin-right: .45em
+	@extend .halfContainer
+	+respond-to(screen)
+		margin-right: .45em
+	+respond-to(handhelds)
+		margin-right: 0
 
 .rightContainer
-	margin-left: .45em
+	@extend .halfContainer
 
 $footer-height: 5em
 #footer

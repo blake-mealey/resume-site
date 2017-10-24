@@ -27,7 +27,10 @@ body
 	font-size: 100%
 
 h1
-	+font-block(300, 7.5em, $font-opacity)
+	+respond-to(screen)
+		+font-block(300, 7.5em, $font-opacity)
+	+respond-to(handhelds)
+		+font-block(300, 4em, $font-opacity)
 
 h2
 	+font-block(400, 4em, $font-opacity)
