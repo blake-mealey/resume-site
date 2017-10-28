@@ -27,10 +27,8 @@ function formatTextForWeb(text) {
 	do {
 		var match = /<(latex|web):(.*):\1>/g.exec(text);
 		if (match) {
-			console.log(match)
 			var content = match[formatGroup] == 'web' ? match[contentGroup] : '';
 			text = text.substring(0, match.index) + content + text.substring(match.index + match[0].length);
-			console.log(text);
 		}
 	} while (match);
 	return text;
@@ -40,9 +38,9 @@ var data;
 function updatePageData() {
 	// Read in initial data from files
 	var skills = readFile("skills.json");
+	var contact = readFile("contact.json");
 	data = {
 		title: "Blake Mealey Resume",
-		links: readFile("links.json"),
 		experience: readFile("experience.json"),
 		education: readFile("education.json"),
 		projects: skills.projects,
@@ -52,6 +50,29 @@ function updatePageData() {
 		achievements: readFile("achievements.json"),
 		activities: readFile("activities.json")
 	};
+
+	data.links = [
+		{
+			title: "LinkedIn",
+			link: 'https://www.linkedin.com/in/' + contact.linkedin,
+			image: 'images/linkedin.png'
+		},
+		{
+			title: "Email",
+			link: 'mailto:' + contact.email,
+			image: 'images/ic_email_black_36dp_1x.png'
+		},
+		{
+			title: 'GitHub',
+			link: 'https://www.github.com/' + contact.github,
+			image: 'images/GitHub-Mark-32px.png'
+		},
+		{
+			title: 'Projects',
+			link: 'https://' + contact.projectsSite,
+			image: 'images/ic_folder_open_black_36dp.png'
+		}
+	]
 
 	for (var i = 0; i < data.achievements.competitions.length; i++) {
 		var ordinal = converter.toOrdinal(data.achievements.competitions[i].place);
