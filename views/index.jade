@@ -9,7 +9,7 @@ block content
 				each link in links
 					li
 						a(href=link.link)
-							img(src=link.image width=32 height=32)
+							object(type='image/svg+xml' data='images/links/' + link.title + '.svg')
 							p= link.title
 			form(method='get' action='files/Blake-Mealey-Resume.pdf')
 				button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored(type='submit')
@@ -73,7 +73,7 @@ block content
 							.seperator
 						each program in level.software
 							td.imgContainer
-								img(src=program.image title=program.name)
+								img(title=program src='images/software/' + program.replace(/\s/g, '-') + '.png')
 
 		h3 Miscellaneous
 		ul

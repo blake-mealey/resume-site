@@ -54,23 +54,19 @@ function updatePageData() {
 	data.links = [
 		{
 			title: "LinkedIn",
-			link: 'https://www.linkedin.com/in/' + contact.linkedin,
-			image: 'images/linkedin.png'
+			link: 'https://www.linkedin.com/in/' + contact.linkedin
 		},
 		{
 			title: "Email",
-			link: 'mailto:' + contact.email,
-			image: 'images/ic_email_black_36dp_1x.png'
+			link: 'mailto:' + contact.email
 		},
 		{
 			title: 'GitHub',
-			link: 'https://www.github.com/' + contact.github,
-			image: 'images/GitHub-Mark-32px.png'
+			link: 'https://www.github.com/' + contact.github
 		},
 		{
 			title: 'Projects',
-			link: 'https://' + contact.projectsSite,
-			image: 'images/ic_folder_open_black_36dp.png'
+			link: 'https://' + contact.projectsSite
 		}
 	]
 

@@ -33,13 +33,17 @@ body
 			overflow: hidden
 			li
 				display: inline-block
-				line-height: 3em
 				+respond-to(screen)
 					padding: 0 4em 0 4em
 				+respond-to(handhelds)
 					padding: 0 0.5em 0 0.5em
 					p
 						font-size: 1em
+				object
+					width: 2.4em
+					height: 2.4em
+					opacity: 0.8
+					margin-top: 0.25em
 		.mdl-button--fab
 			z-index: 100
 			+respond-to(screen)
@@ -119,6 +123,8 @@ $experienceBarHeight: 2em
 			float: left
 			img
 				+dims(5em, 5em)
+				+respond-to(handhelds)
+					+dims(3em, 3em)
 		$seperator-color: #9e9e9e
 		.seperatorParent
 			height: 1px

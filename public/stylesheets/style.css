@@ -89,8 +89,7 @@ body {
       margin: 0;
       overflow: hidden; }
       .infoWrapper #info ul li {
-        display: inline-block;
-        line-height: 3em; }
+        display: inline-block; }
         @media only screen and (min-width: 75em) {
           .infoWrapper #info ul li {
             padding: 0 4em 0 4em; } }
@@ -99,6 +98,11 @@ body {
             padding: 0 0.5em 0 0.5em; }
             .infoWrapper #info ul li p {
               font-size: 1em; } }
+        .infoWrapper #info ul li object {
+          width: 2.4em;
+          height: 2.4em;
+          opacity: 0.8;
+          margin-top: 0.25em; }
     .infoWrapper #info .mdl-button--fab {
       z-index: 100; }
       @media only screen and (min-width: 75em) {
@@ -186,6 +190,10 @@ body {
     .softwareExperienceContainer .softwareExperience .imgContainer img {
       width: 5em;
       height: 5em; }
+      @media only screen and (max-width: 75em) {
+        .softwareExperienceContainer .softwareExperience .imgContainer img {
+          width: 3em;
+          height: 3em; } }
   .softwareExperienceContainer .softwareExperience .seperatorParent {
     height: 1px; }
     .softwareExperienceContainer .softwareExperience .seperatorParent .seperator {
