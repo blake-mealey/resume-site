@@ -48,6 +48,7 @@ function updatePageData() {
 		software: skills.software,
 		miscellaneous: skills.misc,
 		achievements: readFile("achievements.json"),
+		courses: readFile("courses.json"),
 		activities: readFile("activities.json")
 	};
 

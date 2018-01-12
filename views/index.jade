@@ -108,7 +108,14 @@ block content
 			each item in achievements.academic
 				li= item
 
-		//- include:markdown-it markdown/skills-achievements.md
+		h2 Relevant Courses
+		each course, index in courses
+			.experienceContainer(class=(index % 2 == 0 ? "leftContainer" : "rightContainer"))
+				h4!= course.number + " - " + course.name
+				p.dates= course.date + " Semester, University of Calgary"
+				ul
+					each point in course.points
+						li= point
 
 		h2 Extracurricular Activities
 		each activity, index in activities
