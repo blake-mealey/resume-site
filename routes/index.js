@@ -152,6 +152,16 @@ function updatePageData() {
 		data.achievements.academic[i] = formatTextForWeb(data.achievements.academic[i]);
 	}
 
+	for (i = 0; i < data.courses.length; i++) {
+		var course = data.courses[i];
+		course.number = formatTextForWeb(course.number);
+		course.name = formatTextForWeb(course.name);
+		course.date = formatTextForWeb(course.date);
+		for (j = 0; j < course.points.length; j++) {
+			course.points[j] = formatTextForWeb(course.points[j]);
+		}
+	}
+
 	for (i = 0; i < data.activities.length; i++) {
 		item = data.activities[i];
 		item.title = formatTextForWeb(item.title);
